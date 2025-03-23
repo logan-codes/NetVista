@@ -3,6 +3,14 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from 'react-router-dom'
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
+import { Label } from "@/components/ui/label"
+
 
 
 export function Landing() {
@@ -78,6 +86,33 @@ export function Landing() {
             </div>;
         </div>
       </section>
+
+      <section className="py-24 bg-background">
+  <div className="max-w-4xl mx-auto px-6 sm:px-8 lg:px-10">
+    <h2 className="text-4xl md:text-5xl font-bold text-center mb-12">
+      Frequently Asked Questions
+    </h2>
+    <Accordion type="single" collapsible className="space-y-6">
+      <AccordionItem value="item-1" className="border-b border-gray-300">
+        <AccordionTrigger className="text-xl md:text-2xl py-4">
+          Can college students join?
+        </AccordionTrigger>
+        <AccordionContent className="text-lg text-gray-600">
+          Yes. It's exclusively for college students to gain experience through startups.
+        </AccordionContent>
+      </AccordionItem>
+      <AccordionItem value="item-2" className="border-b border-gray-300">
+        <AccordionTrigger className="text-xl md:text-2xl py-4">
+          Can I manage my academics along with this?
+        </AccordionTrigger>
+        <AccordionContent className="text-lg text-gray-600">
+          Yes. It's focused on finding short jobs to gain experience in startups.
+        </AccordionContent>
+      </AccordionItem>
+    </Accordion>
+  </div>
+</section>
+
 
       <section className="py-24 bg-primary text-primary-foreground">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
